@@ -1,0 +1,64 @@
+{
+  "name": "rotary-dot-org-websites",
+  "version": "1.0.0",
+  "description": "A modern, emotionally powerful humanitarian website inspired by Rotary International - Creating Hope in the World with E-commerce functionality",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "node server.js",
+    "build": "echo 'Build complete - static files ready'",
+    "vercel-build": "echo 'Vercel build complete'",
+    "netlify-build": "echo 'Netlify build complete'"
+  },
+  "keywords": [
+    "rotary",
+    "humanitarian",
+    "nonprofit",
+    "ngo",
+    "charity",
+    "service",
+    "volunteer",
+    "donation",
+    "ecommerce"
+  ],
+  "author": "Junaid Ul Haque Sheikh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junaidsheikh0002/junaidulhaquesheikh0001"
+  },
+  "author_info": {
+    "name": "Junaid Ul Haque Sheikh",
+    "role": "Web Developer (Intern / Trainee)",
+    "location": "Shaheed Makdhoom Bilawal Society Near Safoora Chowrangi Karachi Pakistan",
+    "whatsapp": [
+      "+92 335 9033554",
+      "+92 334 3046525",
+      "+92 332 3605926",
+      "+92 332 0213589",
+      "+92 337 2135310",
+      "+92 336 8068664",
+      "+92 337 0105286"
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/profile.php?id=100064065330176",
+      "youtube": "https://www.youtube.com/@JunaidUlHaqueSheikh-g3z",
+      "tiktok": "https://www.tiktok.com/@junaid.ul.haque.s65",
+      "facebook_group": "https://www.facebook.com/groups/958910999994384",
+      "fiverr": "https://www.fiverr.com/users/junaidsheikh000/portfolio"
+    }
+  }
+}

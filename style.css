@@ -1,0 +1,572 @@
+/* style.css – full design system for Rotary International front page */
+
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- UTILITY CLASSES ---------- */
+.u-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.u-width-10 {
+    max-width: 1280px;
+}
+
+.u-text-centered {
+    text-align: center;
+}
+
+.u-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.u-button-blue {
+    background: #005587;
+    color: white;
+    border-color: #005587;
+}
+
+.u-button-blue:hover {
+    background: #003f66;
+    border-color: #003f66;
+}
+
+.u-button-reversed-white {
+    background: transparent;
+    border-color: white;
+    color: white;
+}
+
+.u-button-reversed-white:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.u-button-reversed-blue {
+    background: white;
+    color: #005587;
+    border-color: white;
+}
+
+.u-button-reversed-blue:hover {
+    background: #f0f4f8;
+}
+
+.-slim {
+    padding: 0.5rem 1.5rem;
+}
+
+.layout-container {
+    padding: 3rem 0;
+}
+
+.-dark {
+    background: #0a2647;
+    color: white;
+}
+
+.-padding-reduced {
+    padding: 2rem 0;
+}
+
+.a11y-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ---------- HEADER / NAVIGATION ---------- */
+.site-header {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.site-header-logo {
+    width: 180px;
+}
+
+.site-nav-toggle-mobile, .site-nav-toggle-search {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 0.3rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.site-nav-container {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.site-nav-utility {
+    background: #e6edf5;
+}
+
+.site-nav-utility-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+}
+
+.site-nav-utility-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.site-nav-utility-links a {
+    font-weight: 500;
+    color: #0a2647;
+}
+
+.site-nav-utility-ctas {
+    display: flex;
+    gap: 1rem;
+}
+
+.site-nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.site-nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.site-nav-item {
+    position: relative;
+}
+
+.site-nav-item-heading a {
+    display: block;
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    color: #0a2647;
+    border-bottom: 3px solid transparent;
+}
+
+.site-nav-item-heading a:hover {
+    border-bottom-color: #005587;
+}
+
+.site-nav-utility-links.-small {
+    display: none;
+}
+
+/* ---------- HERO TYPE (VIDEO) ---------- */
+.hero-type {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-type-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-type-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #0a2647;
+}
+
+.hero-type-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-type-pause {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hero-type-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-type-text h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.supporting-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ---------- NEWS FEATURES ---------- */
+.news-features {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.news-features-title {
+    font-size: 2.5rem;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 2rem;
+}
+
+.hero-mosaic {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.hero-mosaic-item {
+    position: relative;
+    min-height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.hero-mosaic-item:hover {
+    transform: scale(1.02);
+}
+
+.hero-mosaic-item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 2rem;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%);
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.news-features-button {
+    margin-top: 3rem;
+}
+
+/* ---------- CAROUSEL (impact numbers) ---------- */
+.carousel {
+    background: #f1f5f9;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 3rem;
+}
+
+.carousel-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.carousel-item {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.carousel-item-image img {
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.carousel-item-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #005587;
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- AREAS OF FOCUS (causes) ---------- */
+.causes-text {
+    font-size: 2.5rem;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 1rem;
+}
+
+.causes-description {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.home-causes-lists {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.aof {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home-causes-item-lists {
+    background: rgba(255,255,255,0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+}
+
+.home-causes-item-lists:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.home-causes-item-lists a {
+    display: block;
+    padding: 2rem 1.5rem;
+    color: white;
+}
+
+.home-causes-image {
+    display: block;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+}
+
+/* ---------- CALLOUT SECTION ---------- */
+.callout-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.callout-section-left-content {
+    background: #2a7f6b;
+    color: white;
+    border-radius: 30px;
+    padding: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.callout-section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.callout-section-right {
+    border-radius: 30px;
+    overflow: hidden;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+    background: #0a1a2f;
+    color: #cbd5e1;
+    padding: 3rem 0;
+}
+
+.site-footer-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.site-footer-nav a {
+    color: white;
+    font-weight: 500;
+}
+
+.site-footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.site-footer-social a img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+}
+
+.site-footer-legal {
+    font-size: 0.9rem;
+}
+
+.site-footer-legal a {
+    color: #94a3b8;
+    margin: 0 0.5rem;
+}
+
+/* ---------- BACKGROUND IMAGE IDs (from original) ---------- */
+#hero_type_css_699dcc0daefb5 {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_1400/public/homepage-video-overlay-dec22.jpg?itok=eUGi11JP');
+}
+#field-left-feature_css_699dcc0db05b0 {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_1200/public/2026-02-2025-33-007.jpg?itok=llRIe8LX');
+}
+#field-right-top-feature_css_699dcc0db0f8a {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_1200/public/2024-10-Polio_Final.jpg?itok=mtni8umh');
+}
+#field-right-bottom-feature_css_699dcc0db1895 {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_1200/public/2026-02-POA-Vietnam-HBVN-022.jpg?itok=dRnapkv2');
+}
+#cause .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Promoting-Peace-20250226_TR_003.jpg?itok=U11ZS2Y6');
+}
+#cause--2 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Fighting-Disease-20240613_IN_050.jpg?itok=8lfxsTwn');
+}
+#cause--3 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Providing-Clean-Water-20211026_PK_030.jpg?itok=yi8cWNe8');
+}
+#cause--4 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Improving-Maternal-and-Child-Health-20250408_PG_186.jpg?itok=a4W8Ni08');
+}
+#cause--5 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Supporting-Education-20240620_PA_032.jpg?itok=7GVIUlP_');
+}
+#cause--6 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Growing-Local-Economies-20221008_TR_008.jpg?itok=bYrVs7O8');
+}
+#cause--7 .home-causes-image {
+    background-image: url('https://www.rotary.org/sites/default/files/styles/w_350/public/home-areas-of-focus-2025-Protecting-the-Environment-2024-04-012.jpg?itok=Tk1cn2Oi');
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .site-nav-list {
+        flex-direction: column;
+    }
+    .site-nav-utility-links.-large {
+        display: none;
+    }
+    .site-nav-utility-links.-small {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .site-nav-toggle-mobile {
+        display: flex;
+    }
+    .hero-mosaic {
+        grid-template-columns: 1fr;
+    }
+    .hero-type-text h1 {
+        font-size: 2.8rem;
+    }
+    .home-causes-lists {
+        flex-direction: column;
+    }
+    .callout-section {
+        grid-template-columns: 1fr;
+    }
+    .carousel-list {
+        flex-wrap: wrap;
+    }
+}

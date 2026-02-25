@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter - Junaid Ul Haque Sheikh | Web Developer</title>
+    <style>
+        :root {
+            --primary: #0033a0;
+            --secondary: #fcb421;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary), #0040c0);
+            color: white;
+            padding: 50px 60px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .contact-bar {
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-weight: 600;
+        }
+        
+        .contact-bar a {
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-bar a:hover {
+            text-decoration: underline;
+        }
+        
+        .content {
+            padding: 60px;
+        }
+        
+        .date {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        
+        .recipient {
+            margin-bottom: 40px;
+        }
+        
+        .recipient h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .recipient p {
+            color: var(--gray);
+        }
+        
+        .salutation {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .body-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        .body-text p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,51,160,0.05), rgba(252,180,33,0.05));
+            border-left: 4px solid var(--secondary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skill-item::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .portfolio-section {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .portfolio-section h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .portfolio-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .portfolio-link {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .closing {
+            margin-top: 40px;
+        }
+        
+        .closing p {
+            margin-bottom: 15px;
+        }
+        
+        .signature {
+            margin-top: 40px;
+        }
+        
+        .signature-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .signature-title {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .social-section {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .social-section h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .social-link.facebook { background: #1877f2; }
+        .social-link.youtube { background: #ff0000; }
+        .social-link.tiktok { background: #000; }
+        .social-link.fiverr { background: #1dbf73; }
+        .social-link.github { background: #333; }
+        
+        .btn-download {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-download:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .actions {
+            text-align: center;
+            padding: 40px 60px;
+            background: var(--light);
+        }
+        
+        @media (max-width: 768px) {
+            .header, .content, .contact-bar, .actions {
+                padding: 30px 25px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-bar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Application for Internship / Training Position</h1>
+            <p>Web Development</p>
+        </div>
+        
+        <div class="contact-bar">
+            <span>📍 Karachi, Pakistan</span>
+            <a href="tel:+923359033554">📱 +92 335 9033554</a>
+            <a href="mailto:junaidsheikh000@example.com">📧 junaidsheikh000@example.com</a>
+        </div>
+        
+        <div class="content">
+            <p class="date">February 24, 2026</p>
+            
+            <div class="recipient">
+                <h3>To the Hiring Manager</h3>
+                <p>Human Resources Department</p>
+            </div>
+            
+            <p class="salutation">Dear Sir/Madam,</p>
+            
+            <div class="body-text">
+                <p><strong>Subject: Application for Web Development Internship/Training Position</strong></p>
+                
+                <p>I am writing to express my strong interest in joining your organization as a Web Development Intern/Trainee. As a passionate and dedicated web developer based in Karachi, Pakistan, I am eager to contribute my skills while learning from experienced professionals in a dynamic environment.</p>
+                
+                <p>Throughout my journey as a web developer, I have built multiple projects demonstrating my proficiency in modern web technologies. My portfolio includes e-commerce platforms, business websites, restaurant sites, and skill-development platforms – each showcasing my ability to create responsive, user-friendly, and visually appealing websites.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>🎯 What I Bring to Your Team</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML5 & CSS3</div>
+                    <div class="skill-item">JavaScript (ES6+)</div>
+                    <div class="skill-item">Responsive Design</div>
+                    <div class="skill-item">React.js</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Next.js</div>
+                    <div class="skill-item">Vercel & Netlify</div>
+                    <div class="skill-item">Git & GitHub</div>
+                    <div class="skill-item">UI/UX Principles</div>
+                    <div class="skill-item">Problem Solving</div>
+                </div>
+            </div>
+            
+            <div class="body-text">
+                <p>What sets me apart is my commitment to continuous learning and my proactive approach to problem-solving. I thrive in collaborative environments and am always ready to take on new challenges. My goal is to grow as a developer while making meaningful contributions to your projects.</p>
+                
+                <p>I am highly motivated to learn, improve my skills, and contribute positively to your team. I am looking for a learning-focused environment where I can gain practical experience and grow professionally.</p>
+            </div>
+            
+            <div class="portfolio-section">
+                <h4>🚀 Featured Projects (12 Live Websites)</h4>
+                <div class="portfolio-links">
+                    <a href="https://digitech-transformation.vercel.app/" target="_blank" class="portfolio-link">DigiTech Transformation</a>
+                    <a href="https://digitechtransformation-junaid.netlify.app/" target="_blank" class="portfolio-link">DigiTech (Netlify)</a>
+                    <a href="https://kfcpakistan-junaid-sheikh.netlify.app/" target="_blank" class="portfolio-link">KFC Pakistan</a>
+                    <a href="https://al-zainab-mobile-junaid.netlify.app/" target="_blank" class="portfolio-link">Al-Zainab Mobile</a>
+                    <a href="https://toyota-indus-pk.vercel.app/" target="_blank" class="portfolio-link">Toyota Indus</a>
+                    <a href="https://khaadi-eight.vercel.app/" target="_blank" class="portfolio-link">Khaadi</a>
+                    <a href="https://maxgreenskills0009.netlify.app/" target="_blank" class="portfolio-link">Max Green Skills</a>
+                    <a href="https://teknofest-pakistan.vercel.app/" target="_blank" class="portfolio-link">Teknofest Pakistan</a>
+                    <a href="https://openclaw-ai-ecommerce.vercel.app/" target="_blank" class="portfolio-link">OpenClaw AI</a>
+                    <a href="https://bilal-textile-sheikh.netlify.app/" target="_blank" class="portfolio-link">Bilal Textile</a>
+                    <a href="https://gulmohargroup-junaid.vercel.app/" target="_blank" class="portfolio-link">Gul Mohar Group</a>
+                    <a href="https://maharaja-restaurant.vercel.app/" target="_blank" class="portfolio-link">Maharaja Restaurant</a>
+                </div>
+            </div>
+
+            <div class="portfolio-section" style="margin-top: 20px; background: #fff3e0;">
+                <h4>🎬 Video Showcase</h4>
+                <div class="portfolio-links">
+                    <a href="https://www.facebook.com/reel/1391624955578357" target="_blank" class="portfolio-link" style="background: #1877f2;">Watch My Work Reel on Facebook</a>
+                </div>
+            </div>
+            
+            <div class="body-text">
+                <p>I would be grateful for an opportunity to discuss how I can add value to your organization. I am available for an interview at your convenience and can be reached via phone, WhatsApp, or email.</p>
+            </div>
+            
+            <div class="closing">
+                <p>Thank you for your time and consideration.</p>
+            </div>
+            
+            <div class="signature">
+                <p class="signature-name">Junaid Ul Haque Sheikh</p>
+                <p class="signature-title">Web Developer (Intern / Trainee)</p>
+                <p style="margin-top: 15px; color: var(--gray);">
+                    Shaheed Makdhoom Bilawal Society<br>
+                    Near Safoora Chowrangi<br>
+                    Karachi, Pakistan
+                </p>
+            </div>
+            
+            <div class="social-section">
+                <h4>🌐 Connect With Me</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100064065330176" target="_blank" class="social-link facebook">
+                        Facebook Profile
+                    </a>
+                    <a href="https://www.youtube.com/@JunaidUlHaqueSheikh-g3z" target="_blank" class="social-link youtube">
+                        YouTube Channel
+                    </a>
+                    <a href="https://www.tiktok.com/@junaid.ul.haque.s65" target="_blank" class="social-link tiktok">
+                        TikTok
+                    </a>
+                    <a href="https://www.facebook.com/groups/958910999994384" target="_blank" class="social-link facebook">
+                        Facebook Group
+                    </a>
+                    <a href="https://github.com/junaidsheikh0002/junaidulhaquesheikh0001" target="_blank" class="social-link github">
+                        GitHub Repository
+                    </a>
+                    <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio/Njk5NmRmNDI4NzY1ZGMwMDAxOGRhYWIw" target="_blank" class="social-link fiverr">
+                        Fiverr Portfolio 1
+                    </a>
+                    <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio/Njk4Yzc5MzJiMTM4NzQwMDAxZWE0Nzk3" target="_blank" class="social-link fiverr">
+                        Fiverr Portfolio 2
+                    </a>
+                    <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio/Njk4Yzc3ODI0NGYwNDQwMDAxMDAxNzc4" target="_blank" class="social-link fiverr">
+                        Fiverr Portfolio 3
+                    </a>
+                    <a href="https://www.fiverr.com/users/junaidsheikh000/portfolio/Njk5NmUyYjU3MjllODUwMDAxNGYxY2M1" target="_blank" class="social-link fiverr">
+                        Fiverr Portfolio 4
+                    </a>
+                </div>
+            </div>
+
+            <!-- WhatsApp Contact Numbers -->
+            <div class="social-section" style="margin-top: 20px; background: #dcfce7;">
+                <h4>📱 WhatsApp Contact Numbers</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/923359033554" target="_blank" class="social-link" style="background: #25d366;">+92 335 9033554</a>
+                    <a href="https://wa.me/923343046525" target="_blank" class="social-link" style="background: #25d366;">+92 334 3046525</a>
+                    <a href="https://wa.me/923323605926" target="_blank" class="social-link" style="background: #25d366;">+92 332 3605926</a>
+                    <a href="https://wa.me/923320213589" target="_blank" class="social-link" style="background: #25d366;">+92 332 0213589</a>
+                    <a href="https://wa.me/923372135310" target="_blank" class="social-link" style="background: #25d366;">+92 337 2135310</a>
+                    <a href="https://wa.me/923368068664" target="_blank" class="social-link" style="background: #25d366;">+92 336 8068664</a>
+                    <a href="https://wa.me/923370105286" target="_blank" class="social-link" style="background: #25d366;">+92 337 0105286</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button class="btn-download" onclick="window.print()">📄 Print / Save as PDF</button>
+            <p style="margin-top: 20px; color: var(--gray); font-size: 0.9rem;">
+                Press Ctrl+P (or Cmd+P on Mac) to save as PDF
+            </p>
+        </div>
+    </div>
+</body>
+</html>
