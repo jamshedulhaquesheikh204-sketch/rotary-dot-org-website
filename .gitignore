@@ -33,3 +33,8 @@ temp/
 
 # Package Lock (optional - uncomment if needed)
 # package-lock.json
+
+.vercel
+
+# Local Netlify folder
+.netlify
